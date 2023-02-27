@@ -226,7 +226,6 @@ class EhApplication : Application(), DefaultLifecycleObserver, ImageLoaderFactor
 
                 val trustManager = manager.filterIsInstance<X509TrustManager>().first()
                 builder.sslSocketFactory(EhSSLSocketFactory, trustManager)
-                builder.proxy(Proxy.NO_PROXY)
             }
             builder.build()
         }
